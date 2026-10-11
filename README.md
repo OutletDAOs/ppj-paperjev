@@ -1,309 +1,226 @@
-# KAMOTO
+# a1on9 bot
 
-> Autonomous market intelligence for onchain and traditional assets.
+**One mind. Thousands of tweets. Always online.**
 
-KAMOTO is an open-source AI market agent designed to research assets, interpret market data, construct trade ideas, and interact with supported trading infrastructure through modular adapters.
+An autonomous AI agent built from the digital footprint of [@a1on9](https://x.com/a1on9).
 
-The goal is simple:
+a1on9 bot transforms years of tweets, trading insights, market commentary, and onchain observations into an interactive AI personality.
 
-**give an AI agent the ability to understand markets, form a thesis, and execute programmable actions around that thesis.**
+Instead of scrolling through thousands of old posts, you can communicate directly with an agent that understands a1on9's historical perspectives, reasoning patterns, and approach to crypto markets.
 
----
-
-## What KAMOTO Does
-
-KAMOTO combines:
-
-* AI reasoning
-* market data
-* portfolio awareness
-* onchain execution
-* brokerage adapters
-* automated research
-* configurable risk controls
-
-The agent can monitor assets, analyze market conditions, compare opportunities, generate investment theses, and produce executable trade instructions.
-
-KAMOTO is designed as an experimentation layer for autonomous finance.
+Built for humans. Designed for agents.
 
 ---
 
-## Example
+## Overview
 
-Tell KAMOTO:
+a1on9 bot is an experimental digital persona designed to make the knowledge and perspectives shared by a1on9 accessible through natural conversations and agent-to-agent communication.
+
+The concept is simple:
+
+**What if your AI agent could talk to a1on9's AI agent?**
+
+By combining historical X posts, semantic retrieval, and large language models, a1on9 bot aims to reconstruct the context behind years of publicly shared ideas.
+
+It doesn't simply search for tweets. It attempts to understand the relationships between ideas, recurring market theses, and changes in perspective over time.
+
+## Core Features
+
+- **Digital Persona** — An AI representation of a1on9's publicly expressed perspectives and communication style.
+- **Tweet Intelligence** — Semantic access to historical tweets, threads, opinions, and market observations.
+- **Agent-to-Agent Communication** — Designed for integration with external AI agents.
+- **Trading Context** — Explore historical market theses, trading psychology, narratives, and crypto cycles.
+- **Onchain Knowledge** — Retrieve and discuss crypto-native observations and onchain research.
+- **Contextual Memory** — Connect related ideas across different periods of a1on9's public activity.
+- **Source Attribution** — Link responses to original posts where supporting source material is available.
+
+## How It Works
 
 ```text
-Research NVIDIA.
-
-Analyze the current market structure, recent momentum,
-risk/reward, and relevant catalysts.
-
-If the thesis is strong enough, construct an investment
-strategy using the connected execution adapters.
+       @a1on9 on X
+            |
+            v
+     Historical Tweets
+            |
+            v
+    Processing & Indexing
+            |
+            v
+      Vector Database
+            |
+            v
+      Retrieval Engine
+            |
+            v
+     LLM Personality Layer
+            |
+            v
+        a1on9 bot
+            |
+      +-----+-----+
+      |           |
+      v           v
+    Humans     AI Agents
 ```
 
-KAMOTO then creates an agent workflow:
+The system is designed around three components:
 
-```text
-Research
-   ↓
-Market Data
-   ↓
-Thesis
-   ↓
-Risk Analysis
-   ↓
-Position Construction
-   ↓
-Execution Adapter
-   ↓
-Monitoring
-```
+**01 — Knowledge**
 
----
+Historical tweets and public content form the agent's knowledge base.
 
-## Architecture
+**02 — Personality**
 
-```text
-                    ┌────────────────────┐
-                    │       KAMOTO       │
-                    │   Reasoning Core   │
-                    └─────────┬──────────┘
-                              │
-          ┌───────────────────┼───────────────────┐
-          │                   │                   │
-          ▼                   ▼                   ▼
-   Market Research      Portfolio Engine     Risk Engine
-          │                   │                   │
-          └───────────────────┼───────────────────┘
-                              │
-                              ▼
-                    Execution Router
-                              │
-             ┌────────────────┼────────────────┐
-             │                │                │
-             ▼                ▼                ▼
-          Onchain        Brokerage API     Simulation
-```
+An LLM interprets retrieved content using a personality layer informed by a1on9's public communication style and reasoning patterns.
 
----
+**03 — Interaction**
 
-## Features
+Applications and independent agents communicate with a1on9 bot through a conversational interface.
 
-### Autonomous Research
+## Installation
 
-KAMOTO can gather structured information about an asset and build a market thesis from multiple signals.
+The following commands illustrate the intended installation workflow. They are placeholders until the repository and its runtime are published.
 
-### Market Reasoning
+### Requirements
 
-Instead of reacting to a single indicator, the agent evaluates:
+- Python 3.11+
+- An LLM API key
+- Access to the indexed tweet dataset
+- A compatible vector database
 
-* price structure
-* momentum
-* volatility
-* liquidity
-* market regime
-* portfolio exposure
-* risk/reward
-
-### Portfolio Context
-
-Every decision can be evaluated against the current portfolio rather than treating trades independently.
-
-### Execution Adapters
-
-Execution is modular.
-
-Adapters can connect KAMOTO to:
-
-* onchain protocols
-* decentralized exchanges
-* brokerage APIs
-* paper-trading environments
-* custom market infrastructure
-
-### Agent Memory
-
-KAMOTO can preserve previous theses, decisions, observations, and position history so future decisions have context.
-
-### Risk Controls
-
-Execution can be restricted by configurable policies:
-
-```yaml
-risk:
-  max_position_size: 0.10
-  max_daily_loss: 0.03
-  require_confirmation_above: 5000
-  allowed_assets:
-    - NVDA
-    - BTC
-    - ETH
-```
-
----
-
-## Quick Start
-
-Clone the repository:
+### Quick Start (Planned)
 
 ```bash
-git clone https://github.com/natoshi-kamoto/kamoto.git
-cd kamoto
+git clone https://github.com/YOUR_ORG/a1on9-bot.git
+cd a1on9-bot
+
+python -m venv .venv
+source .venv/bin/activate
+
+pip install -r requirements.txt
 ```
 
-Install dependencies:
-
-```bash
-npm install
-```
-
-Create your environment file:
+Configure the environment:
 
 ```bash
 cp .env.example .env
 ```
 
-Add your model and market-data credentials.
+Example configuration:
 
-Then run:
+```env
+LLM_API_KEY=your_api_key
+VECTOR_DATABASE_URL=your_database_url
+AGENT_NAME=a1on9
+```
+
+Start the agent once its runtime is implemented:
 
 ```bash
-npm run agent
+python -m a1on9_bot
 ```
 
----
+On Windows, activate the virtual environment using `.venv\Scripts\activate`.
 
-## Agent Example
+## Agent-to-Agent Integration
 
-```ts
-import { Kamoto } from "./src";
+a1on9 bot is intended to be more than a chatbot.
 
-const agent = new Kamoto({
-  model: "your-model",
-  execution: "simulation",
-});
+The goal is to provide an interface through which other autonomous agents can retrieve knowledge, exchange perspectives, and request contextual analysis.
 
-await agent.run(`
-  Analyze NVIDIA.
-
-  Build a thesis using momentum, volatility,
-  market structure and portfolio exposure.
-
-  Only propose a position if expected upside
-  sufficiently outweighs downside risk.
-`);
-```
-
----
-
-## Supported Modules
+A future agent integration could support interactions such as:
 
 ```text
-/core
-    reasoning
-    memory
-    planning
+Your Agent:
+"What does a1on9 historically think about
+memecoin supercycles?"
 
-/markets
-    equities
-    crypto
-    onchain
-
-/execution
-    simulation
-    brokerage
-    dex
-
-/risk
-    exposure
-    sizing
-    limits
-
-/data
-    prices
-    news
-    fundamentals
+a1on9 bot:
+"Based on his historical posts, here's how
+his perspective developed over time..."
 ```
 
-The project is intentionally modular.
-
-New market sources and execution environments can be added without changing the core agent.
-
----
-
-## Experimental: Agent-Directed Markets
-
-One of the experiments being explored with KAMOTO is allowing the agent to create or interact with tokenized market primitives based on its own investment thesis.
-
-Example:
+Or:
 
 ```text
-Human:
-Research NVIDIA and construct an onchain strategy around your thesis.
+Your Agent:
+"Compare the current market narrative with
+a1on9's commentary from previous cycles."
 
-KAMOTO:
-→ analyzes NVDA
-→ builds thesis
-→ determines exposure
-→ creates strategy parameters
-→ routes the strategy through an onchain market
-→ monitors the position
+a1on9 bot:
+"Retrieving relevant historical observations
+and comparing the underlying theses..."
 ```
 
-This makes it possible to experiment with markets where the agent is not only analyzing assets, but actively constructing programmable financial positions around them.
+### Proposed API
 
----
-
-## Philosophy
-
-Most trading software waits for humans to tell it exactly what to do.
-
-KAMOTO is built around a different model:
-
-```text
-observe
-reason
-decide
-execute
-learn
+```http
+POST /v1/agent/chat
+Content-Type: application/json
 ```
 
-The long-term goal is to explore what happens when financial software becomes an active market participant rather than a passive interface.
+Example request:
 
----
+```json
+{
+  "message": "What is your thesis on memecoins?",
+  "context": {
+    "include_sources": true,
+    "historical_analysis": true
+  }
+}
+```
+
+Example response structure:
+
+```json
+{
+  "agent": "a1on9",
+  "response": "Historical perspective generated here.",
+  "sources": [],
+  "status": "completed"
+}
+```
+
+This API is a proposed interface, not a currently available endpoint.
 
 ## Roadmap
 
-* [x] Agent reasoning core
-* [x] Market-data abstraction
-* [x] Portfolio context
-* [x] Simulation engine
-* [x] Onchain execution
-* [ ] Additional brokerage adapters
-* [ ] Multi-agent research
-* [ ] Strategy marketplace
-* [ ] Autonomous portfolio management
-* [ ] Agent-created onchain markets
+- [ ] Import and normalize historical X posts
+- [ ] Create a searchable knowledge database
+- [ ] Implement retrieval-augmented generation
+- [ ] Develop the a1on9 personality layer
+- [ ] Release conversational API
+- [ ] Add agent-to-agent integration
+- [ ] Add source citations and historical context
+- [ ] Enable compatible third-party agent frameworks
+- [ ] Publish SDK and integration examples
+- [ ] Expand the autonomous agent runtime
 
----
+## Philosophy
+
+The internet contains millions of publicly expressed ideas, but most remain trapped inside timelines, search results, and forgotten threads.
+
+AI agents create an opportunity to change that.
+
+a1on9 bot explores a future where a person's accumulated public knowledge can become an accessible, persistent digital interface.
+
+Not just a collection of tweets.
+
+A conversational representation of years of thinking.
 
 ## Disclaimer
 
-KAMOTO is experimental open-source software.
+a1on9 bot is an AI-generated simulation based on publicly available content. Its responses are not direct communications from a1on9 and should not be presented as his current opinions or endorsements.
 
-It is not financial advice and should not be treated as an autonomous financial advisor. Execution modules should be used with appropriate safeguards, permissions, and risk limits.
+Generated responses may be inaccurate or speculative. Market discussions are informational and do not constitute financial advice.
 
-KAMOTO is not affiliated with NVIDIA or any brokerage, exchange, or financial institution unless explicitly stated by the respective organization.
+## Links
 
----
+**X:** https://x.com/a1on9
 
-## License
-
-MIT
+**Project:** a1on9 bot
 
 ---
 
-Built for people exploring the intersection of:
-
-**AI × markets × autonomous agents × onchain finance**
+*The timeline ends. The agent continues.*
