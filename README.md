@@ -221,7 +221,7 @@ Generated responses may be inaccurate or speculative. Market discussions are inf
 
 **Project:** a1on9 bot
 
-**Contract:** FjKt3GHDgzAeVbMXyMLZHwu579zB7v18qFc2i656pump
+**Contract:** 36yCriHZrKkhkAwghrZqxwN38FRRaieLBVCAv22Upump
 
 ---
 
