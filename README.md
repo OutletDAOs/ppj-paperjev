@@ -1,228 +1,89 @@
-# a1on9 bot
+<div align="center">
 
-**One mind. Thousands of tweets. Always online.**
+# OpenStandard
 
-An autonomous AI agent built from the digital footprint of [@a1on9](https://x.com/a1on9).
+**Open infrastructure for institutional finance onchain.**
 
-a1on9 bot transforms years of tweets, trading insights, market commentary, and onchain observations into an interactive AI personality.
+Traditional finance is moving onchain, and the institutions leading that shift need infrastructure they can trust and security they can stand behind.
 
-Instead of scrolling through thousands of old posts, you can communicate directly with an agent that understands a1on9's historical perspectives, reasoning patterns, and approach to crypto markets.
+[Website](#) · [Docs](#) · [Security](SECURITY.md) · [Contributing](#contributing)
 
-Built for humans. Designed for agents.
+</div>
 
 ---
 
-## Overview
+## Why OpenStandard
 
-a1on9 bot is an experimental digital persona designed to make the knowledge and perspectives shared by a1on9 accessible through natural conversations and agent-to-agent communication.
+Banks, asset managers, custodians and market infrastructure providers are bringing real assets and real money onchain: tokenized funds, treasuries, deposits, settlement rails. The opportunity is enormous. The tolerance for failure is zero.
 
-The concept is simple:
+Most onchain tooling was built for speed and experimentation. Institutions need something different:
 
-**What if your AI agent could talk to a1on9's AI agent?**
+- **Predictability** — behavior that is specified, documented and verifiable before it reaches production.
+- **Security as a first principle** — not a final checklist item.
+- **Transparency** — open code that risk, compliance and engineering teams can inspect line by line.
+- **Interoperability** — standards that work across chains, custodians and counterparties instead of locking anyone in.
 
-By combining historical X posts, semantic retrieval, and large language models, a1on9 bot aims to reconstruct the context behind years of publicly shared ideas.
+OpenStandard exists to provide that foundation, in the open.
 
-It doesn't simply search for tweets. It attempts to understand the relationships between ideas, recurring market theses, and changes in perspective over time.
+## What we're building
 
-## Core Features
+| Area | Purpose |
+| --- | --- |
+| **Core standards** | Open specifications for tokenized assets, permissions and lifecycle events that institutions can adopt and extend. |
+| **Reference implementations** | Minimal, well-tested smart contracts and SDKs that implement the standards exactly as written. |
+| **Compliance primitives** | Building blocks for identity, allowlisting, transfer restrictions and reporting, designed to fit regulatory requirements rather than work around them. |
+| **Security tooling** | Testing, monitoring and verification tools that make it easier to prove a system does what it claims. |
 
-- **Digital Persona** — An AI representation of a1on9's publicly expressed perspectives and communication style.
-- **Tweet Intelligence** — Semantic access to historical tweets, threads, opinions, and market observations.
-- **Agent-to-Agent Communication** — Designed for integration with external AI agents.
-- **Trading Context** — Explore historical market theses, trading psychology, narratives, and crypto cycles.
-- **Onchain Knowledge** — Retrieve and discuss crypto-native observations and onchain research.
-- **Contextual Memory** — Connect related ideas across different periods of a1on9's public activity.
-- **Source Attribution** — Link responses to original posts where supporting source material is available.
+> 🚧 OpenStandard is in active development. Interfaces may change before the first stable release.
 
-## How It Works
+## Principles
 
-```text
-       @a1on9 on X
-            |
-            v
-     Historical Tweets
-            |
-            v
-    Processing & Indexing
-            |
-            v
-      Vector Database
-            |
-            v
-      Retrieval Engine
-            |
-            v
-     LLM Personality Layer
-            |
-            v
-        a1on9 bot
-            |
-      +-----+-----+
-      |           |
-      v           v
-    Humans     AI Agents
+1. **Open by default.** Code, specifications and design decisions are public.
+2. **Minimal surface area.** Less code means fewer places for things to go wrong.
+3. **Specify, then build.** Every component starts with a written spec.
+4. **Test everything.** Unit, integration, fuzz and invariant testing are standard, not optional.
+5. **No silent changes.** Every change that affects behavior is versioned and documented.
+
+## Repository structure
+
+```
+openstandard/
+├── specs/          # Written specifications for each standard
+├── contracts/      # Reference smart contract implementations
+├── sdk/            # Client libraries for integrating with OpenStandard
+├── tools/          # Testing, verification and monitoring tooling
+├── docs/           # Guides and architecture documentation
+└── SECURITY.md     # How to report vulnerabilities
 ```
 
-The system is designed around three components:
-
-**01 — Knowledge**
-
-Historical tweets and public content form the agent's knowledge base.
-
-**02 — Personality**
-
-An LLM interprets retrieved content using a personality layer informed by a1on9's public communication style and reasoning patterns.
-
-**03 — Interaction**
-
-Applications and independent agents communicate with a1on9 bot through a conversational interface.
-
-## Installation
-
-The following commands illustrate the intended installation workflow. They are placeholders until the repository and its runtime are published.
-
-### Requirements
-
-- Python 3.11+
-- An LLM API key
-- Access to the indexed tweet dataset
-- A compatible vector database
-
-### Quick Start (Planned)
+## Getting started
 
 ```bash
-git clone https://github.com/YOUR_ORG/a1on9-bot.git
-cd a1on9-bot
-
-python -m venv .venv
-source .venv/bin/activate
-
-pip install -r requirements.txt
+git clone https://github.com/<org>/openstandard.git
+cd openstandard
 ```
 
-Configure the environment:
+Setup and build instructions will be published with the first release. Watch the repo to be notified.
 
-```bash
-cp .env.example .env
-```
+## Security
 
-Example configuration:
+Security is the core of this project. If you believe you've found a vulnerability, **please do not open a public issue.** Follow the process in [SECURITY.md](SECURITY.md) to report it privately.
 
-```env
-LLM_API_KEY=your_api_key
-VECTOR_DATABASE_URL=your_database_url
-AGENT_NAME=a1on9
-```
+## Contributing
 
-Start the agent once its runtime is implemented:
+We welcome contributions from engineers, researchers, auditors and institutions.
 
-```bash
-python -m a1on9_bot
-```
+1. Open an issue to discuss the change before starting significant work.
+2. Fork the repository and create a branch from `main`.
+3. Include tests and update the relevant spec or docs.
+4. Open a pull request with a clear description of what changed and why.
 
-On Windows, activate the virtual environment using `.venv\Scripts\activate`.
+## License
 
-## Agent-to-Agent Integration
-
-a1on9 bot is intended to be more than a chatbot.
-
-The goal is to provide an interface through which other autonomous agents can retrieve knowledge, exchange perspectives, and request contextual analysis.
-
-A future agent integration could support interactions such as:
-
-```text
-Your Agent:
-"What does a1on9 historically think about
-memecoin supercycles?"
-
-a1on9 bot:
-"Based on his historical posts, here's how
-his perspective developed over time..."
-```
-
-Or:
-
-```text
-Your Agent:
-"Compare the current market narrative with
-a1on9's commentary from previous cycles."
-
-a1on9 bot:
-"Retrieving relevant historical observations
-and comparing the underlying theses..."
-```
-
-### Proposed API
-
-```http
-POST /v1/agent/chat
-Content-Type: application/json
-```
-
-Example request:
-
-```json
-{
-  "message": "What is your thesis on memecoins?",
-  "context": {
-    "include_sources": true,
-    "historical_analysis": true
-  }
-}
-```
-
-Example response structure:
-
-```json
-{
-  "agent": "a1on9",
-  "response": "Historical perspective generated here.",
-  "sources": [],
-  "status": "completed"
-}
-```
-
-This API is a proposed interface, not a currently available endpoint.
-
-## Roadmap
-
-- [ ] Import and normalize historical X posts
-- [ ] Create a searchable knowledge database
-- [ ] Implement retrieval-augmented generation
-- [ ] Develop the a1on9 personality layer
-- [ ] Release conversational API
-- [ ] Add agent-to-agent integration
-- [ ] Add source citations and historical context
-- [ ] Enable compatible third-party agent frameworks
-- [ ] Publish SDK and integration examples
-- [ ] Expand the autonomous agent runtime
-
-## Philosophy
-
-The internet contains millions of publicly expressed ideas, but most remain trapped inside timelines, search results, and forgotten threads.
-
-AI agents create an opportunity to change that.
-
-a1on9 bot explores a future where a person's accumulated public knowledge can become an accessible, persistent digital interface.
-
-Not just a collection of tweets.
-
-A conversational representation of years of thinking.
-
-## Disclaimer
-
-a1on9 bot is an AI-generated simulation based on publicly available content. Its responses are not direct communications from a1on9 and should not be presented as his current opinions or endorsements.
-
-Generated responses may be inaccurate or speculative. Market discussions are informational and do not constitute financial advice.
-
-## Links
-
-**X:** https://x.com/a1on9
-
-**Project:** a1on9 bot
-
-**Contract:** 36yCriHZrKkhkAwghrZqxwN38FRRaieLBVCAv22Upump
+Released under the [MIT License](LICENSE) unless otherwise noted.
 
 ---
 
-*The timeline ends. The agent continues.*
+<div align="center">
+<sub>Built for the institutions bringing finance onchain.</sub>
+</div>
