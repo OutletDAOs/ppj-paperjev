@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/paperjev.png" alt="PaperJev" width="100%">
+  <img src="/paperjev.png" alt="PaperJev" width="100%">
 </p>
 
 # PPJ PaperJev
