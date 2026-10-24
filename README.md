@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="PaperJev" width="100%">
+</p>
+
 # PPJ PaperJev
 
 **An automated trader that runs on Jev and trades on [Papertrade](https://papertrade.xyz).**
