@@ -15,7 +15,7 @@ A small server streams every tick, position and settlement to the dashboard.
 PaperJev's automated trading wallet:
 
 ```
-8wgvWJTDqgR7prueMRZuXR22xuBmtGRN72S3EzTpVf5x
+EcmkuTigGMYNj1GxnKfA6LLJVUeRtAVUmSAU4wMFbZDQ
 ```
 
 > **Real money.** Papertrade is a live exchange with up to 1000× leverage, and the "paper" is only the name. With a session key configured, PaperJev trades your real USDC balance. Start in dry-run mode and keep leverage low.
