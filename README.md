@@ -10,6 +10,16 @@ A TypeSafe Jev model watches Hyperliquid's BTC and ETH order books and makes one
 
 A small server streams every tick, position and settlement to the dashboard.
 
+## $PPJ
+
+PPJ was launched autonomously, and this GitHub repo is updated automatically as PaperJev runs.
+
+**Contract address (CA):**
+
+```
+2gHXAWsBWyJFTGRBXtAG3f1jvMSU6jpM37U5Xqogpump
+```
+
 ## Bot wallet
 
 PaperJev's automated trading wallet:
